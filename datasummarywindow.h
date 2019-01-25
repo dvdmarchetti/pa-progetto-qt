@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QStandardItemModel>
+#include <QtCharts>
 
 namespace Ui {
 class DataSummaryWindow;
@@ -13,7 +14,9 @@ class DataSummaryWindow : public QMainWindow
     Q_OBJECT
 
     QMap<QString, QList<QStringList>> _records;
-    QString _current_region_key = 0;
+    QString _currentRegionKey = "";
+    QChart _maleChart;
+    QChart _femaleChart;
 
 public:
     explicit DataSummaryWindow(QWidget *parent = nullptr);
@@ -23,14 +26,14 @@ private:
     Ui::DataSummaryWindow *ui;
 
     void parseFile();
+    void initializeWidgets();
+    void buildChart(QChart &chart, QString title);
     void repaintUi();
 
-    void titleLabel();
-    void tableWidget();
-
-    void regionPicker();
-    void malePieChart();
-    void femalePieChart();
+    void repaint_titleLabel();
+    void repaint_tableWidget();
+    void repaint_malePieChart();
+    void repaint_femalePieChart();
 
 private slots:
     void handle_regionChange(const QString region);

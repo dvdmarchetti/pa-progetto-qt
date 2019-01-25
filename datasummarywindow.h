@@ -1,7 +1,6 @@
 #ifndef DATASUMMARYWINDOW_H
 #define DATASUMMARYWINDOW_H
 
-#include "record.h"
 #include <QMainWindow>
 #include <QStandardItemModel>
 

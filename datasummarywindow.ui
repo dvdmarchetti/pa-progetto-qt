@@ -20,58 +20,54 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_5">
+   <layout class="QHBoxLayout" name="columnsLayout">
     <item>
-     <layout class="QHBoxLayout" name="columnsLayout">
+     <layout class="QVBoxLayout" name="tableArea">
       <item>
-       <layout class="QVBoxLayout" name="tableArea">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>85</horstretch>
-            <verstretch>5</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Regione</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="scaledContents">
-           <bool>false</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTableWidget" name="tableWidget">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>85</horstretch>
-            <verstretch>95</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>85</horstretch>
+          <verstretch>5</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Regione</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="chartsArea">
-        <item>
-         <widget class="QComboBox" name="regionPicker">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-            <horstretch>20</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QTableWidget" name="tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>85</horstretch>
+          <verstretch>95</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="chartsArea">
+      <item>
+       <widget class="QComboBox" name="regionPicker">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>20</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

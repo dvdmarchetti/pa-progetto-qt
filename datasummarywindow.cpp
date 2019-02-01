@@ -62,29 +62,9 @@ void DataSummaryWindow::initializeWidgets()
 
     connect(ui->regionPicker, SIGNAL(currentTextChanged(const QString)), this, SLOT(handle_regionChange(const QString)));
 
-    // Male Chart
+    // Charts
     buildChart(_maleChart, "<b>Uomini</b>");
     buildChart(_femaleChart, "<b>Donne</b>");
-    /*
-    _maleChart.setAnimationOptions(QChart::AllAnimations);
-    _maleChart.legend()->setAlignment(Qt::AlignRight);
-    _maleChart.setTitle("<b>Maschi</b>");
-    QChartView *maleChartView = new QChartView(&_maleChart);
-    maleChartView->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Ignored));
-    maleChartView->setRenderHint(QPainter::Antialiasing);
-    ui->chartsArea->addWidget(maleChartView);
-    */
-
-    // Female Chart
-    /*
-    _femaleChart.setAnimationOptions(QChart::AllAnimations);
-    _femaleChart.legend()->setAlignment(Qt::AlignRight);
-    _femaleChart.setTitle("<b>Femmine</b>");
-    QChartView *femaleChartView = new QChartView(&_femaleChart);
-    femaleChartView->setSizePolicy(QSizePolicy(QSizePolicy::Minimum, QSizePolicy::Ignored));
-    femaleChartView->setRenderHint(QPainter::Antialiasing);
-    ui->chartsArea->addWidget(femaleChartView);
-    */
 }
 
 void DataSummaryWindow::buildChart(QChart &chart, QString title)
